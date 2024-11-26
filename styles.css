@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+#monthYear {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* 캘린더 버튼을 좌우로 배치 */
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+  margin: 20px;
+}
+
+.date {
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* 할 일이 있는 날짜의 스타일 */
+.date.has-task {
+  background-color: #ffeb3b; /* 할 일이 있는 날짜의 배경색 */
+  color: #000;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  width: 300px;
+  text-align: center;
+}
+
+#modal input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+#modal button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
